@@ -1,0 +1,43 @@
+'oled.bas
+
+' Copyright (C) 2024 Chris Stoddard
+' Based on work done by KW Services.
+' https://github.com/kwinter745321/PicoDisplay
+' MIT License
+' MMBASIC 5.08
+
+SETPIN GP21, DOUT
+SETPIN GP17, DIN
+SETPIN GP26, AIN
+
+'Clears the screen
+CLS
+
+'Draws a box on the screen
+Box 0, 0, 128, 64, 2, RGB(WHITE), RGB(BLACK)
+
+'Gets the IP Adress
+ipaddr$ = MM.Info(ip address)
+
+'Writes IP Address to the screen
+Text 10, 10, ipaddr$, "L", 1, 1, RGB(WHITE), RGB(BLACK)
+
+'Writes the time to the screen
+Text 10, 25, time$, "L", 1, 1, RGB(WHITE), RGB(BLACK)
+
+'When the button is pressed writes the Voltage to the screen
+'otherwise updates time
+Do
+  If Pin(GP17) = 0 Then
+    reading$ = Str$(Pin(GP26))
+    Text 10, 40, reading$, "L", 1, 1, RGB(WHITE), RGB(BLACK)
+    Pin(GP21) = 1
+    Pause 300
+  Else
+    Pin(GP21) = 0
+    Text 10, 25, Time$, "L", 1, 1, RGB(WHITE), RGB(BLACK)
+    Pause 300
+  EndIf
+Loop
+
+
