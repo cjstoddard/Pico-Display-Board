@@ -1,6 +1,6 @@
 # Pico-Display-Board
 
-On Tindie there is a cool little board for sale, the Pico Display Base Board, that makes hooking up several devices to a Raspberry Pi Pico reasonably easy. The board only costs about $14, so it is a bargin.
+On Tindie there is a cool little board for sale, the Pico Display Base Board, that makes hooking up several devices to a Raspberry Pi Pico reasonably easy. The board only costs about $15, so it is a bargin.
 
 Tindie: https://www.tindie.com/products/aiy745321/pico-display-base-board/
 
