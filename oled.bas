@@ -1,6 +1,5 @@
 'oled.bas
 
-' Copyright (C) 2024 Chris Stoddard
 ' Based on work done by KW Services.
 ' https://github.com/kwinter745321/PicoDisplay
 ' MIT License
