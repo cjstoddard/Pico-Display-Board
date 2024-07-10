@@ -16,13 +16,12 @@ CLS
 'Draws a box on the screen
 Box 0, 0, 128, 64, 2, RGB(WHITE), RGB(BLACK)
 
-'Gets the IP Adress
+'Gets the IP Adress and writes it to the screen. 
+'If you do not have a Pico W leave these 2 lines out line out
 ipaddr$ = MM.Info(ip address)
-
-'Writes IP Address to the screen
 Text 10, 10, ipaddr$, "L", 1, 1, RGB(WHITE), RGB(BLACK)
 
-'Writes the time to the screen
+'Writes the time to the screen, it should pull from the RTC
 Text 10, 25, time$, "L", 1, 1, RGB(WHITE), RGB(BLACK)
 
 'When the button is pressed writes the Voltage to the screen
