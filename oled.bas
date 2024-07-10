@@ -12,6 +12,12 @@ SETPIN GP26, AIN
 ' Clears the screen
 CLS
 
+' Sets time from NTP server
+' If you do not have an RTC, but you are using a Pico W
+' you can uncomment this line and get the time/date from
+' the internet
+'WEB NTP -5
+
 ' Draws a box on the screen
 Box 0, 0, 128, 64, 2, RGB(WHITE), RGB(BLACK)
 
@@ -20,8 +26,8 @@ Box 0, 0, 128, 64, 2, RGB(WHITE), RGB(BLACK)
 ipaddr$ = MM.Info(ip address)
 Text 10, 10, ipaddr$, "L", 1, 1, RGB(WHITE), RGB(BLACK)
 
-' Writes the time to the screen, it should pull from the RTC
-' If you do not have an RTC, leave this line out
+' Writes the time to the screen, If you do not have an
+' RTC or Pico W, leave this line out
 Text 10, 25, Time$, "L", 1, 1, RGB(WHITE), RGB(BLACK)
 
 ' When the button is pressed writes the Voltage to the screen
@@ -34,6 +40,7 @@ Do
     Pause 300
   Else
     Pin(GP21) = 0
+    ' If you do not have an RTC or Pico W, leave this line out
     Text 10, 25, Time$, "L", 1, 1, RGB(WHITE), RGB(BLACK)
     Pause 300
   EndIf
