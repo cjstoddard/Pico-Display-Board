@@ -22,7 +22,7 @@ CLS
 Box 0, 0, 128, 64, 2, RGB(WHITE), RGB(BLACK)
 
 ' Gets the IP Adress and writes it to the screen. 
-' If you do not have a Pico W leave these 2 lines line out
+' If you do not have a Pico W leave these 2 lines out
 ipaddr$ = MM.Info(ip address)
 Text 10, 10, ipaddr$, "L", 1, 1, RGB(WHITE), RGB(BLACK)
 
