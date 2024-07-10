@@ -21,6 +21,7 @@ ipaddr$ = MM.Info(ip address)
 Text 10, 10, ipaddr$, "L", 1, 1, RGB(WHITE), RGB(BLACK)
 
 ' Writes the time to the screen, it should pull from the RTC
+' If you do not have an RTC, leave this line out
 Text 10, 25, Time$, "L", 1, 1, RGB(WHITE), RGB(BLACK)
 
 ' When the button is pressed writes the Voltage to the screen
