@@ -5,8 +5,8 @@
 ' MIT License
 ' MMBASIC 5.08
 
-SETPIN GP21, DOUT
 SETPIN GP17, DIN
+SETPIN GP21, DOUT
 SETPIN GP26, AIN
 
 ' Clears the screen
