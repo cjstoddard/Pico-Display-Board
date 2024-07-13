@@ -24,4 +24,7 @@ OPTION WIFI "SSID", "PASSWORD"
 
 Once that is done, you can open the com port and type in oled.bas and run the program. I used the same pin configuration as used in the other repo, so if you followed his work, you can add an OLED and run my program with no changes to your wiring. I do not have an SSD1306 LCD yet, it is on the way. Once I have it, I will update this repo with some new code, once I think of something interesting to do with it.
 
+Update 7-13-2024:
+I have added cardkb.bas which demonstrates how to get an M5stack Carkb working on I2C2. At some point I will turn this into a function so it can be inserted into another program easily.
+
 Disclaimer: This software is provided "AS IS", without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a paticular purpose and nonifringment. In no event shall the author or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
