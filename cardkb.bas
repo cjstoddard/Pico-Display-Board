@@ -1,5 +1,7 @@
 'cardkb.bas
 
+' Based on code written by thwill at TheBackShed.com Forums
+' https://www.thebackshed.com/forum/ViewTopic.php?TID=13915&PID=170991#170991
 ' MIT License
 ' MMBASIC 5.08
 
