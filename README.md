@@ -22,7 +22,7 @@ If you have a Raspberry Pi Pico W, you will also need to set this option;
 
 OPTION WIFI "SSID", "PASSWORD"
 
-Once that is done, you can open the com port and type in oled.bas and run the program. I used the same pin configuration as used in the other repo, so if you followed his work, you can add an OLED and run my program with no changes to your wiring. I do not have an SSD1306 LCD yet, it is on the way. Once I have it, I will update this repo with some new code, once I think of something interesting to do with it.
+Once that is done, you can open the com port and type in oled.bas and run the program. I used the same pin configuration as used in the other repo, so if you followed his work, you can add an OLED and run my program with no changes to your wiring. I do not have an SSD1963 LCD yet, it is on the way. Once I have it, I will update this repo with some new code, once I think of something interesting to do with it.
 
 Update 7-13-2024:
 I have added cardkb.bas which demonstrates how to get an M5stack Carkb working on I2C2. At some point I will turn this into a function so it can be inserted into another program easily.
