@@ -34,7 +34,7 @@ Text 10, 25, Time$, "L", 1, 1, RGB(WHITE), RGB(BLACK)
 ' otherwise updates time
 Do
   If Pin(GP17) = 0 Then
-    reading$ = Str$(Pin(GP26))
+    reading$ = Left$(Str$(Pin(GP26)),4) + " volts"
     Text 10, 40, reading$, "L", 1, 1, RGB(WHITE), RGB(BLACK)
     Pin(GP21) = 1
     Pause 300
