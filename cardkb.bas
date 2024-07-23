@@ -12,7 +12,7 @@ Dim addr%, byte%
 SetPin GP18, GP19, I2C2
 
 I2C2 Open 100, 1000
-addr% = &h5F
+addr% = &h5f
 
 Do
   I2C2 Read addr%, 0, 1, byte%
