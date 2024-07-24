@@ -112,7 +112,7 @@ var2 = (P8 * p) \ q(19)
 p = ((p + var1 + var2) \ q(8)) + (P7<<4)
 bme280_read_pressure = p/25600.0
 end function
-'
+
 function bme280_read_humidity() as float
 local integer v_x1,adc_H
 local adc%(1)
@@ -133,13 +133,13 @@ i2c2 open 400,1000
 i2c2 write BME280_ADDRESS,1,1,BME280_REGISTER_CHIPID
 i2c2 read BME280_ADDRESS,0,1,i%
 if i%<>&H60 then print "Error BME280 not found"
-'
+
 i2c2 write BME280_ADDRESS,1,1,BME280_REGISTER_T1
 i2c2 read BME280_ADDRESS,0,6,cal%()
 T1=cal%(0) OR (cal%(1)<< 8)
 T2=cal%(2) OR (cal%(3)<< 8): if T2 and s16b then T2=T2 OR s16
 T3=cal%(4) OR (cal%(5)<< 8): if T3 and s16b then T3=T3 OR s16
-'
+
 i2c2 write BME280_ADDRESS,1,1,BME280_REGISTER_P1
 i2c2 read BME280_ADDRESS,0,18,cal%()
 P1=cal%(0) OR (cal%(1)<<8)
@@ -151,7 +151,7 @@ P6=cal%(10) OR (cal%(11)<<8): if P6 and s16b then P6=P6 OR s16
 P7=cal%(12) OR (cal%(13)<<8): if P7 and s16b then P7=P7 OR s16
 P8=cal%(14) OR (cal%(15)<<8): if P8 and s16b then P8=P8 OR s16
 P9=cal%(16) OR (cal%(17)<<8): if P9 and s16b then P9=P9 OR s16
-'
+
 i2c2 write BME280_ADDRESS,1,1,BME280_REGISTER_H1
 i2c2 read BME280_ADDRESS,0,1,H1
 i2c2 write BME280_ADDRESS,1,1,BME280_REGISTER_H2
@@ -161,12 +161,12 @@ H3=cal%(2)
 H6=cal%(6): if H6 and s8b then H6=H6 OR s8
 H4=(cal%(3)<<4) OR (cal%(4) and &H0F): if H4 and s12b then H4=H4 OR s12
 H5=(cal%(5)<<4) OR (cal%(4)>>4): if H5 and s12b then H5=H5 OR s12
-'
+
 i2c2 write BME280_ADDRESS,0,2,BME280_REGISTER_CONTROLHUMID,&H05
 i2c2 write BME280_ADDRESS,0,2,BME280_REGISTER_CONTROL,&HB7
-'
+
 end sub
-'
+
 function q(x as integer) as integer 
 q=(1<<x)
 End Function 
