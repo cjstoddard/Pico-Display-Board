@@ -61,7 +61,7 @@ Do
   EndIf
 Loop
 
-Sub  screen1
+Sub screen1
   CLS
   Box 0, 0, 128, 64, 2, RGB(WHITE), RGB(BLACK)
   Text 10, 10, ipaddr$, "L", 1, 1, RGB(WHITE), RGB(BLACK)
