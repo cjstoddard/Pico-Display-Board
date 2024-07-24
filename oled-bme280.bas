@@ -1,8 +1,6 @@
 'oled-bme280.bas
 
-' Based on work done by KW Services.
-' https://github.com/kwinter745321/PicoDisplay
-' and matherp at TheBackShed.com Forums
+' Based on work done by matherp at TheBackShed.com Forums
 ' https://www.thebackshed.com/forum/ViewTopic.php?TID=8362
 ' MIT License
 ' MMBASIC 5.08
