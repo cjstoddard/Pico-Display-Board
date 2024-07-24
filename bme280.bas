@@ -38,9 +38,9 @@ SetPin GP18, GP19, I2C2
 '
 bme280_init
 do
-print bme280_read_temp() 'must be run before pressure or humidity
-print bme280_read_pressure()
-print bme280_read_humidity()
+print "Temp: " + Str$(bme280_read_temp()) 'must be run before pressure or humidity
+print "Pres: " + Str$(bme280_read_pressure())
+print "Humi: " + Str$(bme280_read_humidity())
 pause 2000
 loop
 '
