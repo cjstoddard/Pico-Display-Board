@@ -1,6 +1,6 @@
 'oled.bas
 
-' Based on work done by KW Services.
+' Based on code written by KW Services.
 ' https://github.com/kwinter745321/PicoDisplay
 ' MIT License
 ' MMBASIC 5.08

@@ -1,6 +1,6 @@
 'oled-bme280.bas
 
-' Based on work done by matherp at TheBackShed.com Forums
+' Based on code written by matherp at TheBackShed.com Forums
 ' https://www.thebackshed.com/forum/ViewTopic.php?TID=8362
 ' MIT License
 ' MMBASIC 5.08
@@ -58,6 +58,8 @@ Do
     EndIf
   EndIf
 Loop
+
+end
 
 Sub screen1
   CLS
