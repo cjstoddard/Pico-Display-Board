@@ -37,13 +37,13 @@ SetPin GP18, GP19, I2C2
 
 CLS
 screen1
-Button_Status = 0
+Button_Status = 1
 bme280_init
 
 Do
   If Pin(GP17) = 1 Then
     'Do Nothing
-    Pause 300
+    Pause 500
   EndIf
 
   If Pin(GP17) = 0 Then
@@ -51,12 +51,12 @@ Do
       screen1
       Button_Status = 1
       Pin(GP21) = 1
-      Pause 300
+      Pause 500
     ElseIf Button_Status = 1 Then
       screen2
       Button_Status = 0
       Pin(GP21) = 0
-      Pause 300
+      Pause 500
     EndIf
   EndIf
 Loop
