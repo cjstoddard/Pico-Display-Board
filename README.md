@@ -30,4 +30,9 @@ I have added cardkb.bas which demonstrates how to get an M5stack Cardkb working 
 Update 7-24-2024:
 I added bme280.bas which demonstrates connecting a BME280 sensor on the I2C2 bus. I also added oled-bme280.bas which gives you two screens, one with the IP Adress, Date and Time, the other has Temperature, Pressure and Humity. You can change the screens by pressing switch 2.
 
+Update 7-25-2024:
+I added oled-dht22.bas, this domonstrated the use of a DHT22 Temperature/Humity sensor. These are much easier to use than a BME280. MMBasic has support for these built in and the data can be read directly off the device without all the heavy math required by the BME280. The only advantage to the BME280 is it reports pressure as well. I recommend getting one that has a buillt in pullup resistor.
+
+https://www.amazon.com/dp/B0795F19W6?psc=1&ref=ppx_yo2ov_dt_b_product_details
+
 Disclaimer: This software is provided "AS IS", without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a paticular purpose and nonifringment. In no event shall the author or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
