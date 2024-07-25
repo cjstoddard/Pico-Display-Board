@@ -1,5 +1,8 @@
 'oled-dht22.bas
-' Copyright (C) Chris Stoddard
+
+' Code is based examples givien in the
+' PicoMite User Manual, Page 40
+' https://geoffg.net/Downloads/picomite/PicoMite_User_Manual.pdf
 ' MIT License
 ' MMBASIC 5.08
 
