@@ -164,7 +164,6 @@ sub bme280_init
 
   I2C2 write BME280_ADDRESS,0,2,BME280_REGISTER_CONTROLHUMID,&H05
   I2C2 write BME280_ADDRESS,0,2,BME280_REGISTER_CONTROL,&HB7
-
 end sub
 
 function q(x as integer) as integer 
