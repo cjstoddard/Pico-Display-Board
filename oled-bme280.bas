@@ -34,9 +34,9 @@ SetPin GP26, AIN
 SetPin GP18, GP19, I2C2
 
 CLS
+bme280_init
 screen1
 Button_Status = 1
-bme280_init
 
 Do
   If Pin(GP17) = 1 Then
