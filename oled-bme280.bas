@@ -36,45 +36,43 @@ SetPin GP18, GP19, I2C2
 CLS
 bme280_init
 screen1
-Button_Status = 1
-
-Do
-  If Pin(GP17) = 1 Then
-    'Do Nothing
-    Pause 300
-  EndIf
-
-  If Pin(GP17) = 0 Then
-    If Button_Status = 0 Then
-      screen1
-      Button_Status = 1
-      Pin(GP21) = 1
-      Pause 300
-    ElseIf Button_Status = 1 Then
-      screen2
-      Button_Status = 0
-      Pin(GP21) = 0
-      Pause 300
-    EndIf
-  EndIf
-Loop
 
 end
 
 Sub screen1
+Pause 300
   CLS
   Box 0, 0, 128, 64, 2, RGB(WHITE), RGB(BLACK)
-  Text 10, 10, ipaddr$, "L", 1, 1, RGB(WHITE), RGB(BLACK)
-  Text 10, 25, Date$, "L", 1, 1, RGB(WHITE), RGB(BLACK)
-  Text 10, 40, Time$, "L", 1, 1, RGB(WHITE), RGB(BLACK)
+  Pin(GP21) = 1
+  Do
+    Text 10, 10, ipaddr$, "L", 1, 1, RGB(WHITE), RGB(BLACK)
+    Text 10, 25, Date$, "L", 1, 1, RGB(WHITE), RGB(BLACK)
+    Text 10, 40, Time$, "L", 1, 1, RGB(WHITE), RGB(BLACK)
+    If Pin(GP17) = 1 Then
+      'Do Nothing
+      Pause 300
+    Else If Pin(GP17) = 0 Then
+      screen2
+    EndIf
+  Loop
 End Sub
 
 Sub screen2
+Pause 300
   CLS
   Box 0, 0, 128, 64, 2, RGB(WHITE), RGB(BLACK)
-  Text 10, 10, "T: " + Str$(bme280_read_temp()), "L", 1, 1, RGB(WHITE), RGB(BLACK)
-  Text 10, 25, "P: " + Str$(bme280_read_pressure()), "L", 1, 1, RGB(WHITE), RGB(BLACK)
-  Text 10, 40, "H: " + Str$(bme280_read_humidity()), "L", 1, 1, RGB(WHITE), RGB(BLACK)
+  Pin(GP21) = 0
+  Do 
+    Text 10, 10, "T: " + Str$(bme280_read_temp()), "L", 1, 1, RGB(WHITE), RGB(BLACK)
+    Text 10, 25, "P: " + Str$(bme280_read_pressure()), "L", 1, 1, RGB(WHITE), RGB(BLACK)
+    Text 10, 40, "H: " + Str$(bme280_read_humidity()), "L", 1, 1, RGB(WHITE), RGB(BLACK)
+    If Pin(GP17) = 1 Then
+      'Do Nothing
+      Pause 300
+    Else If Pin(GP17) = 0 Then
+      screen1
+    EndIf
+  Loop
 End Sub
 
 function bme280_read_temp() as float
