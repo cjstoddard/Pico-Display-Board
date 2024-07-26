@@ -5,9 +5,6 @@
 ' MIT License
 ' MMBASIC 5.08
 
-option explicit
-option default none
-
 const BME280_ADDRESS = &H76
 const BME280_REGISTER_T1 = &H88
 const BME280_REGISTER_P1 = &H8E
@@ -33,6 +30,7 @@ dim INTEGER t_fine
 SetPin GP18, GP19, I2C2
 
 bme280_init
+
 do
   print "T: " + Str$(bme280_read_temp())
   print "P: " + Str$(bme280_read_pressure())
