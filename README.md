@@ -22,7 +22,7 @@ If you have a Raspberry Pi Pico W, you will also need to set this option;
 
 OPTION WIFI "SSID", "PASSWORD"
 
-Once that is done, you can open the com port and type in oled.bas and run the program. I used the same pin configuration as used in the other repo, so if you followed his work, you can add an OLED and run my program with no changes to your wiring. I do not have an SSD1963 LCD yet, it is on the way. Once I have it, I will update this repo with some new code, once I think of something interesting to do with it.
+Once that is done, you can open the com port and type in oled.bas and run the program. I used the same pin configuration as used in the other repo, so if you followed his work, you can add an OLED and run my program with no changes to your wiring.
 
 You will notice looking at the code here, that I pull code from other sources alot. I am a lazy man, I don't believe in reinventing the wheel. Before I even start a coding project, I do a google search to find out if someone has already done it, if that is the case, I will use their code and adapt it for my own use. I also give credit were credit is due, in each program I will cite the author of the original code along with a link to where I found it. I in no way want to take credit for other peoples work. My intent here is to simply hellp others use what I consider to be a cool development board, so they in turn do not have to reinvent the wheel.
 
