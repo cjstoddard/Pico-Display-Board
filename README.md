@@ -10,17 +10,15 @@ On his Github page he has several examples of how to get various devices working
 
 Before you get started, you will need to set these Options;
 
-OPTION SYSTEM I2C GP8,GP9
-
-OPTION RTC AUTO ENABLE
-
-OPTION LCDPANEL SSD1306I2C, LANDSCAPE
+    OPTION SYSTEM I2C GP8,GP9
+    OPTION RTC AUTO ENABLE
+    OPTION LCDPANEL SSD1306I2C, LANDSCAPE
 
 You will notice that I used SSD1306I2C rather than SSD1306I2C32 that he used. This is because I think his OLED was 128x32, the one I am using is 128x64, the other will work with a 128x64, but you end up with a lot less space to draw to and you will have to alter the code to make it fit.
 
 If you have a Raspberry Pi Pico W, you will also need to set this option;
 
-OPTION WIFI "SSID", "PASSWORD"
+    OPTION WIFI "SSID", "PASSWORD"
 
 Once that is done, you can open the com port and type in oled.bas and run the program. I used the same pin configuration as used in the other repo, so if you followed his work, you can add an OLED and run my program with no changes to your wiring.
 
