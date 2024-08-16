@@ -14,7 +14,7 @@ Box 0, 0, 128, 64, 2, RGB(WHITE), RGB(BLACK)
 Pin(GP21) = 1
 
 Do
-  Device HUMID GP15, temp, humidity
+  Device HUMID GP27, temp, humidity
   ' If you want the temp dispayed in fahrenheit
   ' uncomment the next 2 lines
   'f_temp = (temp * (9/5)) + 32
