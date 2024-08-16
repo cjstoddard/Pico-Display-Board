@@ -9,7 +9,7 @@ Dim FLOAT temp, humidity
 Font 5
 CLS RGB(BLUE)
 Colour RGB(WHITE),RGB(BLUE)
-GUI FRAME #1, "Time and Temperature", 20, 20, 760, 440, RGB(WHITE)
+GUI FRAME #1, "Time, Temperature and Humidity", 20, 20, 760, 440, RGB(WHITE)
 GUI CAPTION #2, "Time: " + Time$, 50, 50, LT, RGB(WHITE), RGB(BLUE)
 GUI CAPTION #3, "Temp: " + Str$(temp), 50, 100, LT, RGB(WHITE), RGB(BLUE)
 GUI CAPTION #4, "Humi: " + Str$(humidity), 50, 150, LT, RGB(WHITE), RGB(BLUE)
