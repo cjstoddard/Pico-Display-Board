@@ -39,4 +39,19 @@ I added oled-dht22.bas, this domonstrated the use of a DHT22 Temperature/Humity 
 
 https://www.amazon.com/dp/B0795F19W6?psc=1&ref=ppx_yo2ov_dt_b_product_details
 
+Update 8-16-2024:
+I finally got an SSD1963 to work with. In order to make it work, you will need to run "option reset" to clear all the options set this far. Unfortunately MMBasic does not support using multiple LCD Panels, you can either use the small OLED or you can use the SSD1963, but not both. Once you have cleared all the options, set the following options.
+
+    OPTION SYSTEM SPI GP10,GP11,GP12
+    OPTION SYSTEM I2C GP8,GP9
+    OPTION LCDPANEL SSD1963_5, LANDSCAPE
+    OPTION GUI CONTROLS 75
+    OPTION TOUCH GP18,GP19
+    GUI CALIBRATE 1, 134, 3777, 2065, -1340
+    OPTION SDCARD GP22
+
+The program ssd1963-dht22.bas is simply oled-dht22.bas rewritten to use the SSD1963 instead of the oled.
+
+Something to be aware of is if you are using WebMite, you are not going to be able use most of the GUI commands. When making WebMite, they had to sacrifice GUI functions for Web functions. This can probably be worked around, but it is something to pay attention to before you get too deep into a project. My suggestion is to use PicoMite instead of WebMite for projects involving an SSD1963. 
+
 Disclaimer: This software is provided "AS IS", without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a paticular purpose and nonifringment. In no event shall the author or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
