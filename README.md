@@ -59,6 +59,6 @@ https://www.amazon.com/dp/B0D47QD82X?psc=1&ref=ppx_yo2ov_dt_b_product_details
 Update 8-18-2024:
 I added ssd1963-dht22-2.bas, this is an adaption of the TwoGaugeButton.txt program on KW Services github that uses the gauges to visually display the Temperature and Humity from the DHT22 sensor.
 
-I also added ssd1963-bme280.bas, which used the BME280 instead of the DHT22 and adds a Pressure gauge to the mix.
+I also added ssd1963-bme280.bas, which uses the BME280 instead of the DHT22 and adds a Pressure gauge to the mix.
 
 Disclaimer: This software is provided "AS IS", without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a paticular purpose and nonifringment. In no event shall the author or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
