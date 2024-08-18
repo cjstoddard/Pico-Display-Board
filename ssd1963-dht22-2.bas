@@ -48,15 +48,13 @@ Do
     CLS BLK
     Exit
   Else
-    ' do nothing
+    CtrlVal(#4) = temp
+    CtrlVal(#5) = humidity
+    CtrlVal(#9) = Time$
+    CtrlVal(#7) = 0
+    CtrlVal(#8) = 1
+    CPU SLEEP 0.5
+    CtrlVal(#7) = 1
+    CtrlVal(#8) = 0
   EndIf
-
-  CtrlVal(#4) = temp
-  CtrlVal(#5) = humidity
-  CtrlVal(#9) = Time$
-  CtrlVal(#7) = 0
-  CtrlVal(#8) = 1
-  CPU SLEEP 0.5
-  CtrlVal(#7) = 1
-  CtrlVal(#8) = 0
 Loop
