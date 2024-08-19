@@ -29,7 +29,7 @@ ipaddr$ = MM.Info(ip address)
 SetPin GP17, DIN
 SetPin GP21, DOUT
 SetPin GP26, AIN
-SetPin GP18, GP19, I2C2
+SetPin GP26, GP27, I2C2
 
 bme280_init
 screen1
