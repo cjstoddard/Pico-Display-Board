@@ -10,8 +10,9 @@ Const GRN=RGB(GREEN)
 Const RED=RGB(RED)
 Const BLU=RGB(BLUE)
 
-RTC GETTIME
 Dim FLOAT temp, humidity
+
+RTC GETTIME
 Font 5
 CLS BLU
 Colour WHT,BLU

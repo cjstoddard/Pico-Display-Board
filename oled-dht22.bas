@@ -6,8 +6,9 @@
 ' MIT License
 ' MMBASIC 5.08
 
-SetPin GP21, DOUT
 Dim FLOAT temp, humidity
+
+SetPin GP21, DOUT
 
 CLS
 Box 0, 0, 128, 64, 2, RGB(WHITE), RGB(BLACK)

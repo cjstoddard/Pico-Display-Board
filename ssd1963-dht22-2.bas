@@ -13,9 +13,9 @@ Const RED=RGB(RED)
 Const BLU=RGB(BLUE)
 Const CYA=RGB(CYAN)
 
-RTC GETTIME
 Dim FLOAT temp, humidity
 
+RTC GETTIME
 GUI DELETE ALL
 Font 5
 Colour BLK,WHT
