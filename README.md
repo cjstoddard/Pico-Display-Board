@@ -52,7 +52,7 @@ The program ssd1963-dht22.bas is simply oled-dht22.bas rewritten to use the SSD1
 
 Something to be aware of is if you are using WebMite, you are not going to be able use most of the GUI commands. When making WebMite, they had to sacrifice GUI functions for Web functions. This can probably be worked around, but it is something to pay attention to before you get too deep into a project. My suggestion is to use PicoMite instead of WebMite for projects involving an SSD1963. 
 
-Here is the SSD1963 that I purchased, it is coming from China, so be patient, it will take time to get. Avoid getting an SSD1963 larger than 5", these require 5V for the bllacklight and there is no easy way to do this.
+Here is the SSD1963 that I purchased, it is coming from China, so be patient, it will take time to get. Avoid getting an SSD1963 larger than 5", these require 5V for the backlight and there is no easy way to do this.
 
 https://www.amazon.com/dp/B0D47QD82X?psc=1&ref=ppx_yo2ov_dt_b_product_details
 
