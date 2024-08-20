@@ -12,9 +12,15 @@ DIM FLOAT temp, humidity
 Const BLK=RGB(BLACK)
 Const WHT=RGB(WHITE)
 
+' If you do not have an RTC, comment out RTC GETTIME
+' and uncomment WEB NTP -5 to get the time/date from
+' the internet instead. The -5 will need to be adjusted
+' for your timezone.
+'WEB NTP -5
+RTC GETTIME
+
 SetPin GP21, DOUT
 Pin(GP21) = 1
-RTC GETTIME
 ipaddr$ = MM.Info(ip address)
 
 CLS
