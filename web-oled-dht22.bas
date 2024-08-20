@@ -25,7 +25,7 @@ WEB TCP INTERRUPT WebInterrupt
 
 Do
   Device HUMID GP27, temp, humidity
-  f_temp = (temp * (9/5)) + 32
+  f_temp = (temp * 1.8) + 32
   temp = f_temp
   Text 10, 25, "Temp: " + Str$(temp) + " F", "L", 1, 1, WHT, BLK
   Text 10, 40, "Humi: " + Str$(humidity) + " %", "L", 1, 1, WHT, BLK
