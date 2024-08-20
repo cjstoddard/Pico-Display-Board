@@ -25,7 +25,7 @@ ipaddr$ = MM.Info(ip address)
 
 CLS
 Box 0, 0, 128, 64, 2, WHT, BLK
-Text 10, 10, "IP: " + ipaddr$, "L", 1, 1, WHT, BLK
+Text 10, 10, ipaddr$, "L", 1, 1, WHT, BLK
 
 WEB TCP INTERRUPT WebInterrupt
 
