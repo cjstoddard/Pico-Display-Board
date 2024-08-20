@@ -62,7 +62,7 @@ I added ssd1963-dht22-2.bas, this is an adaption of the TwoGaugeButton.txt progr
 I also added ssd1963-bme280.bas, which uses the BME280 instead of the DHT22 and adds a Pressure gauge to the mix.
 
 Update 8-20-2024:
-Added web-oled-dht22.bas, for this you will need a Pico W and you will need to enter these options before proceeding.
+Added web-oled-dht22.bas, for this you will need a Pico W with the WebMite firmware installed and you will need to enter these options before proceeding.
 
     OPTION WIFI "SSID", "PASSWORD"
     OPTION TCP SERVER PORT 80
