@@ -7,7 +7,7 @@
 ' MMBASIC 5.08
 
 DIM buff%(4096/8)
-Dim FLOAT temp, humidity
+DIM FLOAT temp, humidity
 
 Const BLK=RGB(BLACK)
 Const WHT=RGB(WHITE)
