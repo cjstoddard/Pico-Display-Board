@@ -61,4 +61,12 @@ I added ssd1963-dht22-2.bas, this is an adaption of the TwoGaugeButton.txt progr
 
 I also added ssd1963-bme280.bas, which uses the BME280 instead of the DHT22 and adds a Pressure gauge to the mix.
 
+Update 8-20-2024:
+Added web-oled-dht22.bas, for this you will need a Pico W and you will need to enter these options before proceeding.
+
+    OPTION WIFI "SSID", "PASSWORD"
+    OPTION TCP SERVER PORT 80
+
+You will need to upload both web-oled-dht22.bas and index.html to the Pico. This program displays the IP address of the Pico, temperature and the hunidity on the oled. You can also point a web browser at the IP address of the Pico, the time, temperature and the hunidity will be displayed in the browser. The page will refesh itself every 60 seconds, this can be changed by editing the index.html file. This is handy if the sensor is outside or in another room.
+
 Disclaimer: This software is provided "AS IS", without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a paticular purpose and nonifringment. In no event shall the author or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
