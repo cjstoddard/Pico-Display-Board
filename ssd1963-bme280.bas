@@ -45,14 +45,17 @@ CLS WHT
 GUI FRAME #1, "Home", 20, 20, 760, 440, BLK
 GUI CAPTION #2, "Temperature", 280, 50, LT, BLK, WHT
 GUI CAPTION #3, "Humidity", 565, 50, LT, BLK, WHT
-GUI GAUGE #4,400,200,100,BLK,BLK,0,100,1,"Deg C",YLW,20,GRN,29,RED
-GUI GAUGE #5,640,200,100,BLK,BLK,0,100,1,"Prec",YLW,30,GRN,60,RED
+GUI GAUGE #4,400,200,100,BLK,BLK,0,120,1,"F",YLW,60,GRN,90,RED
+' If you want temperature in Celsius, Comment out the previous line
+' and uncomment the next line.
+'GUI GAUGE #4,400,200,100,BLK,BLK,0,100,1,"C",YLW,15,GRN,32,RED
+GUI GAUGE #5,640,200,100,BLK,BLK,0,100,1,"%",YLW,30,GRN,60,RED
 GUI CAPTION #6, "States:", 50, 100, LT, BLK, WHT
 GUI LED #7, "Running", 70, 180, 20, GRN
 GUI LED #8, "Resting", 70, 230, 20, RED
 GUI CAPTION #9, Time$, 50, 450, LT, BLK, WHT
-GUI BUTTON #10, "Exit|EXIT", 50, 300, 200, 75, BLK, CYA
-GUI GAUGE #11,400,375,100,BLK,BLK,600,1200,1,"MBar",YLW,900,GRN,1100,RED
+GUI BUTTON #10, "Exit|EXIT", 50, 300, 200, 75, BLK, CYATemperature in Celsius, comment out the
+GUI GAUGE #11,400,375,100,BLK,BLK,600,1200,1,"hPa",YLW,900,GRN,1100,RED
 GUI CAPTION #12, "Pressure", 550, 350, LT, BLK, WHT
 
 CtrlVal(#7) = 0
@@ -67,7 +70,12 @@ Do
     CLS BLK
     Exit
   Else
-    CtrlVal(#4) = bme280_read_temp()
+    temp_c = bme280_read_temp()
+    temp_f = (temp_c * 1.8) + 32
+    CtrlVal(#4) = temp_f
+    ' If you want Temperature in Celsius, comment out the
+    ' previous 3 lines and uncomment the next line.
+    'CtrlVal(#4) = bme280_read_temp()
     CtrlVal(#5) = bme280_read_humidity()
     CtrlVal(#11) = bme280_read_pressure()
     CtrlVal(#9) = Time$
