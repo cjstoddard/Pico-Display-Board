@@ -54,7 +54,7 @@ GUI CAPTION #6, "States:", 50, 100, LT, BLK, WHT
 GUI LED #7, "Running", 70, 180, 20, GRN
 GUI LED #8, "Resting", 70, 230, 20, RED
 GUI CAPTION #9, Time$, 50, 450, LT, BLK, WHT
-GUI BUTTON #10, "Exit|EXIT", 50, 300, 200, 75, BLK, CYATemperature in Celsius, comment out the
+GUI BUTTON #10, "Exit|EXIT", 50, 300, 200, 75, BLK, CYA
 GUI GAUGE #11,400,375,100,BLK,BLK,600,1200,1,"hPa",YLW,900,GRN,1100,RED
 GUI CAPTION #12, "Pressure", 550, 350, LT, BLK, WHT
 
